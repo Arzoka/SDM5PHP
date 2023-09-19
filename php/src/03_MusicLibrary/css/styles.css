@@ -31,6 +31,7 @@ body .card-page .background-gradient img {
   border-radius: 50%;
   aspect-ratio: 1;
   width: 35%;
+  animation: backgroundimganim 3s linear infinite alternate;
 }
 body .card-page p {
   margin-top: 0.1rem;
@@ -107,4 +108,11 @@ body header a h2 {
 }
 .music-card-grid .music-card a .music-genre {
   opacity: 0;
+}
+
+@keyframes backgroundimganim {
+  to {
+    filter: brightness(0.8);
+    width: 30%;
+  }
 }/*# sourceMappingURL=styles.css.map */
