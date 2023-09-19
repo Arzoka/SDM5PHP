@@ -1,5 +1,3 @@
 ## Assignments for back-end classes using Docker and PHP
 
-# Melvin Lockx SD2D
-
-<a target="_blank" href="https://mlockx.nl"></a>
+<a target="_blank" href="https://mlockx.nl">Melvin Lockx SD2D</a>
