@@ -1,0 +1,363 @@
+
+body
+    .card-page-header
+        overflow: hidden
+        position: relative
+        display: flex
+        align-items: center
+        height: 5vh
+        img
+            height: 1.75rem
+            margin-right: 0.5rem
+        @media (prefers-color-scheme: light)
+            background: #00000010
+        a
+            text-decoration: none
+            align-items: center
+            display: inline-block
+            color: #e1e6eb
+            font-size: 1.75rem
+            typography-spacing-vertical: 2.625rem
+            font-weight: 700
+            @media (prefers-color-scheme: light)
+                color: #24333e
+    .background-image
+        position: absolute
+        top: 0
+        left: 0
+        background: #00000000
+        width: 100%
+        height: 100%
+        filter: brightness(50%) blur(5px)
+        z-index: -1
+
+        @media (prefers-color-scheme: light)
+            filter: brightness(1) blur(5px)
+    .card-page
+        max-height: 75vh
+        overflow: hidden
+        padding-top: 1rem
+        @media (max-width: 992px)
+            max-height: 6969vh
+        section
+            h3
+                display: none
+                @media (max-width: 992px)
+                    display: block
+                    margin-top: 5rem
+            h2
+                @media (max-width: 992px)
+                    display: none
+        .background-playing-animation
+            width: 100%
+            height: 100%
+            left: 0
+            top: 0
+            position: fixed
+            overflow: hidden
+            background: #00000000
+            z-index: -69
+            display: flex
+            justify-content: center
+            align-items: center
+            filter: blur(2rem)
+            div
+                display: none
+                width: 0%
+                aspect-ratio: 1
+                border-radius: 50%
+                border: 5px solid white
+                animation: playinganimation 1.5s linear infinite
+                opacity: 0
+                @media (prefers-color-scheme: light)
+                    border: 5px solid black
+        .background-gradient
+            width: 100%
+            height: 100%
+            left: 0
+            top: 0
+            position: fixed
+            background: #00000000
+            z-index: -69
+            display: flex
+            justify-content: center
+            align-items: center
+            filter: blur(20rem)
+            img
+                border-radius: 50%
+                aspect-ratio: 1
+                width: 35%
+                animation: backgroundimganim 3s linear infinite alternate
+
+        p
+            margin-top: 0.1rem
+            margin-bottom: 0.1rem
+        section
+            div
+                h4
+                    margin-top: 1rem
+                div
+                    position: relative
+                    display: flex
+                    justify-content: right
+                    align-items: flex-end
+                    width: 50%
+                    aspect-ratio: 1
+                    .music-img
+                        width: 100%
+                        height: 100%
+                        left: 0
+                        top: 0
+                        position: absolute
+                    #vinyl
+                        transform: translate(1rem,1rem)
+                        width: 20%
+                        aspect-ratio: 1
+                        z-index: 1
+                audio
+                    margin-top: 2rem
+    .artist-card-page
+        overflow: hidden
+        padding-top: 1rem
+        section
+            div
+                .artist-img-wrap
+                    aspect-ratio: 1
+                    height: 50%
+                    overflow: hidden
+                    margin: 0
+                    position: relative
+                    .artist-img
+                        overflow: hidden
+                        height: 100%
+                        object-fit: contain
+            h3
+                display: none
+                @media (max-width: 992px)
+                    display: block
+                    margin-top: 5rem
+            h2
+                @media (max-width: 992px)
+                    display: none
+        .background-playing-animation
+            width: 100%
+            height: 100%
+            left: 0
+            top: 0
+            position: fixed
+            overflow: hidden
+            background: #00000000
+            z-index: -69
+            display: flex
+            justify-content: center
+            align-items: center
+            filter: blur(2rem)
+            div
+                display: none
+                width: 0%
+                aspect-ratio: 1
+                border-radius: 50%
+                border: 5px solid white
+                animation: playinganimation 1.5s linear infinite
+                opacity: 0
+                @media (prefers-color-scheme: light)
+                    border: 5px solid black
+        .background-gradient
+            width: 100%
+            height: 100%
+            left: 0
+            top: 0
+            position: fixed
+            background: #00000000
+            z-index: -69
+            display: flex
+            justify-content: center
+            align-items: center
+            filter: blur(20rem)
+            img
+                border-radius: 50%
+                aspect-ratio: 1
+                width: 35%
+                animation: backgroundimganim 3s linear infinite alternate
+
+        p
+            margin-top: 0.1rem
+            margin-bottom: 0.1rem
+        section
+            div
+                h4
+                    margin-top: 1rem
+                div
+                    position: relative
+                    display: flex
+                    justify-content: left
+                    align-items: flex-end
+                    width: 50%
+                    aspect-ratio: 1
+                    .music-img
+                        aspect-ratio: 1
+                        height: 50%
+                        left: 0
+                        top: 0
+                        position: absolute
+                    #vinyl
+                        transform: translate(1rem,1rem)
+                        width: 20%
+                        aspect-ratio: 1
+                        z-index: 1
+                audio
+                    margin-top: 2rem
+    header
+        height: 5vh
+        position: relative
+        display: flex
+        align-items: center
+        background: #ffffff10
+
+        img
+            height: 1.75rem
+            margin-right: 0.5rem
+        @media (prefers-color-scheme: light)
+            background: #00000010
+        a
+            text-decoration: none
+            align-items: center
+            display: inline-block
+            color: #e1e6eb
+            font-size: 1.75rem
+            typography-spacing-vertical: 2.625rem
+            font-weight: 700
+            @media (prefers-color-scheme: light)
+                color: #24333e
+
+.music-card-grid
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    gap: 0.5rem
+    @media (max-width: 768px)
+        grid-template-columns: 1fr 1fr
+    @media (max-width: 384px)
+        grid-template-columns: 1fr
+
+    .music-card
+        margin-top: 0
+        margin-bottom: 0
+        aspect-ratio: 1
+        overflow: hidden
+        margin: 0
+        padding: 0
+        cursor: pointer
+        background-repeat: no-repeat
+        background-size: cover
+
+        p
+            margin: 0
+            color: white
+        a
+            backdrop-filter: brightness(0.9) blur(8px)
+            height: 100%
+            width: 100%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            padding-left: 15%
+            transition: all 0.3s
+            text-decoration: none
+            &:hover
+                backdrop-filter: brightness(1) blur(0)
+                p
+                    transform: translateY(-20%)
+                    text-shadow: 0px 0px 5px black
+                    opacity: 1
+            p
+                transition: all 0.3s
+            .music-title
+                font-size: 2.4vw
+                font-weight: bold
+                @media (max-width: 384px)
+                    font-size: 10vw
+            .music-artist
+                font-size: 2.2vw
+                @media (max-width: 384px)
+                    font-size: 8vw
+            .music-genre
+                opacity: 0
+                @media (max-width: 384px)
+                    font-size: 5vw
+
+.artist-music-card-grid
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    gap: 0.5rem
+
+    @media (max-width: 768px)
+        grid-template-columns: 1fr 1fr
+    @media (max-width: 384px)
+        grid-template-columns: 1fr
+
+    .music-card
+        margin-top: 0
+        margin-bottom: 0
+        aspect-ratio: 1
+        overflow: hidden
+        margin: 0
+        padding: 0
+        cursor: pointer
+        background-repeat: no-repeat
+        background-size: cover
+
+        p
+            margin: 0
+            color: white
+        a
+            backdrop-filter: brightness(0.9) blur(8px)
+            height: 100%
+            width: 100%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            padding-left: 15%
+            transition: all 0.3s
+            text-decoration: none
+            &:hover
+                backdrop-filter: brightness(1) blur(0)
+                p
+                    transform: translateY(-20%)
+                    text-shadow: 0px 0px 5px black
+                    opacity: 1
+            p
+                transition: all 0.3s
+            .music-title
+                font-size: 2vw
+                font-weight: bold
+                @media (max-width: 992px)
+                    font-size: 4vw
+                @media (max-width: 384px)
+                    font-size: 10vw
+            .music-genre
+                opacity: 0
+                @media (max-width: 384px)
+                    font-size: 5vw
+
+.vinyl-animation
+    animation: vinylanim 2.5s linear infinite
+
+@keyframes vinylanim
+    to
+        transform: translate(1rem,1rem) rotate(360deg)
+
+@keyframes backgroundimganim
+    to
+        filter: brightness(0.8)
+        width: 30%
+
+@keyframes playinganimation
+    0%
+        opacity: 0
+        width: 0%
+    50%
+        opacity: 1
+        width: 75%
+    100%
+        width: 100%
+        opacity: 0

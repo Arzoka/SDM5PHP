@@ -1,17 +1,5 @@
 version: "3.9"
 services:
-  wordpress:
-    image: wordpress
-    restart: always
-    ports:
-      - 4209:80
-    environment:
-      WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_USER: exampleuser
-      WORDPRESS_DB_PASSWORD: examplepass
-      WORDPRESS_DB_NAME: exampledb
-    volumes:
-      - ./public:/var/www/html
   php-apache-environment:
     container_name: php-apache
     build:
@@ -20,7 +8,9 @@ services:
     depends_on:
       - db
     volumes:
-      - ./php/src:/var/www/html/
+      - ./public:/var/www/html/
+      - ./app:/var/www/html/app
+
     ports:
       - 8000:80
   db:
