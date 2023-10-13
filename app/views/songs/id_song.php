@@ -4,5 +4,8 @@ if (!isset($_GET['id'])) {
 }
 $song_id = $_GET['id'];
 
-$sql = "SELECT * FROM songs WHERE ID = '$song_id'";
-$song = $conn->query($sql)->fetch_assoc();
+$sql = "SELECT * FROM songs WHERE ID = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param('i', $song_id);
+$stmt->execute();
+$song = $stmt->get_result()->fetch_assoc();

@@ -6,8 +6,11 @@ if (!isset($_GET['artist'])) {
 $link_artist = $_GET['artist'];
 $link_artist = mysqli_real_escape_string($conn, $link_artist);
 
-$sql = "SELECT * FROM songs WHERE artist = '$link_artist'";
-$result = $conn->query($sql);
+$sql = "SELECT * FROM songs WHERE artist = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param('s', $link_artist);
+$stmt->execute();
+$result = $stmt->get_result();
 $artist_songs = array();
 
 while ($row = $result->fetch_assoc()) {
